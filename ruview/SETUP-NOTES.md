@@ -198,7 +198,13 @@ RUVIEW_API_TOKEN=<token> repo/v2/target/release/sensing-server \
 A good result = occupied motion_power clearly > empty, and presence flips False→True when you
 enter. With weak signal it won't; fix placement first.
 
-## Raspberry Pi deployment (TODO — future, run server on a Pi instead of the Mac)
+## Raspberry Pi deployment (the recommended production target)
+
+**Status:** validated — the sensing-server has been built and run on a 64-bit Raspberry Pi
+(Pi 4 8GB) as a long-lived `systemd` unit (`ruview.service`, native build, not Docker), so it
+survives reboots and runs headless 24/7. Give the Pi a reserved IP and point the boards at it
+(see Step 1 / Step 3). Tip: prefer the Pi's IP over its `.local` mDNS name — mDNS resolution can
+be flaky across the LAN.
 
 **Why a Pi is better than the Mac here:** the macOS pain was Colima/Apple-VZ NAT dropping
 ESP32 UDP. On a Pi (real Linux) Docker binds the host network directly, so UDP "just works"

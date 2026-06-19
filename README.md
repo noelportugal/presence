@@ -9,6 +9,7 @@ with 3× ESP32-S3 CSI sensing nodes streaming to a local server. This directory 
 wrapper scripts and notes** — not the upstream project itself.
 
 - `SETUP-NOTES.md` — full writeup: hardware, flashing, the yield=0 fix, native vs Docker, Pi deploy.
+- `FINDINGS.md` — ⚠️ why the pose/skeleton is synthetic (arms never move) — read before chasing a "pose bug".
 - `flash-node.sh` — flash + provision one ESP32-S3 node.
 - `ruview.sh` — start/stop/status the sensing server.
 - `*.example` — templates for the gitignored secrets (`.wifi.env`, `nvs_config.csv`).

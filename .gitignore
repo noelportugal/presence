@@ -45,3 +45,23 @@ jspm_packages
 
 # Yarn Integrity file
 .yarn-integrity
+
+# ── ruview/ ────────────────────────────────────────────────────────────────
+# Upstream clone (clone github.com/ruvnet/RuView here — see ruview/README.md)
+ruview/repo/
+# Python venv (esptool + nvs-partition-gen)
+ruview/.venv/
+# Secrets / machine-specific config (use the .example templates instead)
+ruview/.wifi.env
+ruview/nvs_config.csv
+**/nvs_*.bin
+**/nvs.bin
+# Local Claude config
+ruview/.claude/
+# Captured CSI data / trained models (local, machine-specific)
+ruview/data/models/*
+ruview/data/recordings/*
+!ruview/data/models/.gitkeep
+!ruview/data/recordings/.gitkeep
+# Server log
+sensing-server.log

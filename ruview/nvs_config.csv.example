@@ -1,0 +1,8 @@
+key,type,encoding,value
+csi_cfg,namespace,,
+ssid,data,string,YOUR_WIFI_SSID
+password,data,string,YOUR_WIFI_PASSWORD
+target_ip,data,string,192.168.1.39
+node_id,data,u8,0
+tdm_slot,data,u8,0
+tdm_nodes,data,u8,3
